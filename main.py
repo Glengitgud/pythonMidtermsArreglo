@@ -42,6 +42,9 @@ def salesRecord():
 
     open('sales_log.txt')
     write(itemInput)
+    write(quantityInput)
+    write(priceInput)
+
 
 def viewRecords():
     read = open('sales_log.txt')
