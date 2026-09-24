@@ -1,3 +1,6 @@
+from os import write
+
+
 def interface():
     print("========================================")
     print("     SALES RECORD MANAGEMENT SYSTEM     ")
@@ -29,9 +32,21 @@ def userInput():
         userInput()
 
 def salesRecord():
-    itemInput = input("\nSelect an option 1-5:
+
+    itemInput = input("\nEnter item name: ")
+    quantityInput = input("Enter quantity: ")
+    priceInput = input("Enter price: ")
+
+    quantityInput = int(quantityInput)
+    priceInput = float(priceInput)
+
+    open('sales_log.txt')
+    write(itemInput)
+
 def viewRecords():
-    print("\nSelect an option 1-6: ")
+    read = open('sales_log.txt')
+    for line in read.readlines():
+        print(line)
 def clearData():
     print("\nClearing All Records")
 def exitSystem():
